@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*:not(.fa-solid,.fa-regular,.fa-thin,.fas,.far) {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.toggle-nav-style {
+    animation: open 1s;
+}
+.bg-toggle-nav{
+    background-color: rgba(0,0,0,0.4);
+}
+@keyframes open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
