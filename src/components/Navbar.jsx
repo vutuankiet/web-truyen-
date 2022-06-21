@@ -5,6 +5,7 @@ import {useEffect, useRef, useState} from "react";
 export const Navbar = (props) => {
     const [collapse, setCollapse] = useState(false)
     const [typeListOpen, setTypeListOpen] = useState(false)
+    const [typeSearchOpen, setTypeSearchOpen] = useState(false)
     const bodyRef = useRef(null)
     const handleCollapse = () => {
         setCollapse(c => !c);
@@ -16,6 +17,9 @@ export const Navbar = (props) => {
     }
     const handleOpenTypeList = () => {
         setTypeListOpen(c => !c)
+    }
+    const handleOpenTypeSearch = () => {
+        setTypeSearchOpen(c => !c)
     }
     const handleScrollNav = (e) => {
         console.log('helo')
@@ -31,7 +35,7 @@ export const Navbar = (props) => {
             {/*pc nav*/}
             <div className={'bg-gray-100 w-full'}>
                 <nav
-                    className={'hidden sm:flex mx-auto px-3 xl:px-48 flex justify-between lg:justify-around sm:justify-between items-center  py-4'}>
+                    className={'hidden sm:flex mx-auto px-3 xl:px-32 flex justify-between lg:justify-around sm:justify-between items-center  py-4 pc-nav'}>
                     <ul className={'flex justify-center items-center space-x-6'}>
                         <li>
                             <a className={''}><img src={Logo} width={40}/></a>
@@ -44,16 +48,90 @@ export const Navbar = (props) => {
                                     <i className="fa-solid fa-bars"></i>
                                     <span className={'text-sm font-semibold  text-gray-700'}>Thể loại</span>
                                 </button>
-                                <div className="dropdown-content">
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
+                                <div className="dropdown-content w-96">
+                                    <div className={'grid grid-cols-2'}>
+                                        <div>
+                                            <ul className={'w-48'}>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Tất Cả</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Huyền Huyễn</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Võng Du</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Đồng Nhân</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Cạnh Kỹ</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Kiếm Hiệp</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul className={'w-48'}>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Tiên Hiệp</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Khoa Huyễn</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Đô Thị</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Dã Sử</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Huyền Nghi</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Kỳ Ảo</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </li>
 
-                        <li className={'font-semibold text-sm text-gray-700'}>
-                            <Link to={'/home'}>Bảng xếp hạng</Link>
+                        <li>
+                            <div className="dropdown">
+                                <button
+                                    className=" dropbtn rounded-lg space-x-2">
+                                    <span className={'text-sm font-semibold  text-gray-700'}>Bảng xếp hạng</span>
+                                </button>
+                                <div className="dropdown-content w-48">
+                                    <div className={'grid grid-cols-2'}>
+                                        <div>
+                                            <ul className={'w-48'}>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Thịnh Hành</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Đọc Nhiều</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Tặng Thưởng</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Đề Cử</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Yêu Thích</a>
+                                                </li>
+                                                <li className={'text-sm font-semobold text-amber-600'}>
+                                                    <a href="#">Thảo Luận</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <ul className={`flex justify-center items-center bg-white w-auto overflow-hidden md:w-56 px-2 lg:w-80 rounded-3xl`}>
@@ -81,15 +159,25 @@ export const Navbar = (props) => {
 
             <div>
                 {/*    mobile nav*/}
-                <div className={`bg-white w-full sm:hidden ${fixedNav ? 'fixed' : 'relative'}`}>
+                <div className={`bg-white w-full sm:hidden ${fixedNav ? 'fixed' : 'relative'} mobi-nav`}>
                     <nav className={`flex justify-between items-center px-3 py-4 ${openNavMobile ? 'border-b' : ''}`}>
                         <Link to={'home'}><img src={Logo} width={40}/></Link>
                         <div className={'space-x-5'}>
-                            <span className={'fa-solid fa-magnifying-glass text-xl text-amber-600'}></span>
+                            <span onClick={handleOpenTypeSearch} className={'fa-solid fa-magnifying-glass text-xl text-amber-600'}></span>
                             <span onClick={handleOpenNav}
                                   className={`fa-solid ${openNavMobile ? 'fa-close' : 'fa-bars'} text-xl text-amber-600`}></span>
                         </div>
                     </nav>
+                    <div className={`${typeSearchOpen ? 'block' : 'hidden'}`}>
+                        <ul className={`flex justify-center items-center bg-white w-auto overflow-hidden w-full px-2 border border-gray-400 rounded-3xl`}>
+                            <li className={'flex justify-start items-center overflow-hidden flex-1 rounded-3x space-x-2 py-2 md:pl-2 lg:pl-6'}>
+                                <i className="fa-solid fa-magnifying-glass text-gray-500 text-xl"></i>
+                                <input
+                                    className={'flex-auto text-xs font-lighter border-0 py-1 w-full text-sm text-gray-500 focus:outline-0 focus:border-0'}
+                                    placeholder={'Tìm Kiếm Tên Truyện Hoặc Tên Tác Giả'}/>
+                            </li>
+                        </ul>
+                    </div>
                     <div
                         className={`fixed overflow-y-scroll h-screen ${openNavMobile ? 'block toggle-nav-style shadow-2xl' : 'hidden toggle-nav-style'} right-0  w-60   bg-white
                      scroll-auto`}>

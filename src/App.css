@@ -78,3 +78,12 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+@media (max-width: 810px) {
+  .pc-nav {
+    display: none;
+  }
+    .mobi-nav{
+      display: block;
+    }
+}
