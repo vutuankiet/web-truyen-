@@ -5,7 +5,17 @@
 *:not(.fa-solid,.fa-regular,.fa-thin,.fas,.far) {
     font-family: 'Open Sans', sans-serif !important;
 }
-
+.clam{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.clam-1{
+    -webkit-line-clamp: 2;
+}
+.clam-2{
+    -webkit-line-clamp: 2;
+}
 .toggle-nav-style {
     animation: open 1s;
 }

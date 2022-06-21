@@ -35,7 +35,7 @@ export const Navbar = (props) => {
             {/*pc nav*/}
             <div className={'bg-gray-100 w-full'}>
                 <nav
-                    className={'hidden sm:flex mx-auto px-3 xl:px-32 flex justify-between lg:justify-around sm:justify-between items-center  py-4 pc-nav'}>
+                    className={'hidden sm:flex mx-auto px-3 fixed bg-white w-full  xl:px-32 flex justify-between lg:justify-around sm:justify-between items-center  py-4 pc-nav'}>
                     <ul className={'flex justify-center items-center space-x-6'}>
                         <li>
                             <a className={''}><img src={Logo} width={40}/></a>
@@ -134,8 +134,8 @@ export const Navbar = (props) => {
                             </div>
                         </li>
                     </ul>
-                    <ul className={`flex justify-center items-center bg-white w-auto overflow-hidden md:w-56 px-2 lg:w-80 rounded-3xl`}>
-                        <li className={'flex justify-start items-center overflow-hidden flex-1 rounded-3x space-x-2 py-2 md:pl-2 lg:pl-6'}>
+                    <ul className={`flex justify-center items-center bg-white border w-auto overflow-hidden md:w-56 px-2 lg:w-80 rounded-3xl`}>
+                        <li className={'flex justify-start items-center overflow-hidden flex-1 rounded-3x space-x-2 py-2 md:pl-2 lg:pl-2'}>
                             <i className="fa-solid fa-magnifying-glass text-gray-500 text-xl"></i>
                             <input
                                 className={'flex-auto text-xs font-lighter border-0 py-1 w-full text-sm text-gray-500 focus:outline-0 focus:border-0'}
