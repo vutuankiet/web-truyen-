@@ -37,7 +37,7 @@ export const Home = (props) => {
                                             <span className={'fa-solid fa-user-edit'}></span>
                                             <strong className={'text-sm'}>Hạ Vô Ngân</strong>
                                         </div>
-                                        <div class={'border text-xs px-2 py-1 hover:cursor-pointer'}>Tiên Hiệp</div>
+                                        <div className={'border text-xs px-2 py-1 hover:cursor-pointer'}>Tiên Hiệp</div>
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@ export const Home = (props) => {
                     </div>
                     <div className={"grid grid-cols-1 gap-0 p-2 pt-8"}>
                         <p className={"font-bold p-0 m-0 mb-4"}>Mới cập nhật</p>
-                        <table className="table-fixed bg-gray-100 rounded-2xl overflow-x-scroll scroll-auto">
+                        <table className="table-fixed bg-gray-100 rounded-lg overflow-x-scroll scroll-auto">
                             <tbody className={'overflow-x-scroll scroll-auto'}>
                             <tr className={"hover:bg-white"}>
                                 <td className={"p-2 text-sm text-gray-500"}>[Tiên Hiệp]</td>
@@ -267,19 +267,19 @@ export const Home = (props) => {
                         <h1 className={"font-bold"}>Đánh giá cao</h1>
                     </div>
                     <div
-                        className={"grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-3 p-2"}>
-                        <div className={'flex justify-between space-x-2 p-2 rounded-lg shadow-lg'}>
-                            <div className={'flex justify-between items-center space-y-3 space-x-2 text-sm'}>
-                                <img src={HuyenLuc} className={'object-cover w-20'}/>
-                                <div className={'mt-0 space-y-2 '}>
+                        className={"grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-3 p-2 "}>
+                        <div className={'flex justify-between space-x-2 p-2 rounded-lg shadow-lg border '}>
+                            <div className={'flex justify-between items-center space-x-2'}>
+                                <img src={HuyenLuc} className={'object-cover'}/>
+                                <div className={'mt-0 space-y-2 text-center'}>
                                     <strong className={'text-sm clam clam-1'}>Trọng Sinh Vô Địch</strong>
                                     <div className={'inline-flex'}>
-                                        <div className={'space-x-2'}>
-                                            <button className={'text-sm border-gray-500 bg-gray-500 text-white rounded-xl p-1'}>5.00</button>
-                                            <p className={'self-center'}>Tiên Hiệp</p>
+                                        <div className={'space-x-2 flex items-center'}>
+                                            <button className={'text-xs font-semibold px-2 border-gray-500 bg-gray-500 text-white rounded-xl p-1 '}>5.00</button>
+                                            <p className={'font-semibold '}>9 đánh giá</p>
                                         </div>
                                     </div>
-                                    <p className={'text-sm w-52 clam clam-2'}> Trùng sinh đến cấp ba thời kỳ Dương Đại
+                                    <p className={'text-sm w-32 clam clam-2'}> Trùng sinh đến cấp ba thời kỳ Dương Đại
                                         còn
                                         không tới kịp cao hứng liền bị vội vã tiến vào 【 Thâm Vực 】 bên trong.Đây là một
                                         cái tiên thần tái hiện, yêu ma ăn lục phàm nhân thế giới!Thần Thoại thức tỉnh,
@@ -295,7 +295,7 @@ export const Home = (props) => {
                                         chúng sinh khiếp sợ khủng bố tên về sau, hắn cũng thu được uy chấn lưỡng giới
                                         tôn xưng.Hồn Chủ!**Cảnh giới: Tụ Khí, Tâm Toàn, Linh Chiếu, Không Vô, Luyện
                                         Hồn. . . </p>
-                                    <div className={'flex justify-between items-center'}>
+                                    <div className={'flex flex-col justify-between items-center space-y-3'}>
                                         <div className={'space-x-2'}>
                                             <span className={'fa-solid fa-user-edit'}></span>
                                             <strong className={'text-sm'}>Hạ Vô Ngân</strong>
