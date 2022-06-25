@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import mongoose from "mongoose";
 import BookRoute from "./routes/BookRoute.js";
 import AuthRoute from "./routes/AuthRoute.js";
+import UserRoute from "./routes/UserRoute.js";
 
 const APP = express()
 const PORT = process.env.PORT || 5000
@@ -20,6 +21,7 @@ APP.get('/', (req, res) => {
 // books route
 APP.use(BookRoute)
 APP.use(AuthRoute)
+APP.use(UserRoute)
 //end route
 // not found route
 APP.use('*',(req,res,next)=>{

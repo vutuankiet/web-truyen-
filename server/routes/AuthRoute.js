@@ -1,6 +1,7 @@
 import BaseRoute from "./BaseRoute.js";
 import {ReturnWrapper} from "../Helper/err.js";
 import jwt from 'jsonwebtoken'
+import AuthController from "../controllers/AuthController.js";
 
 class AuthRoute extends BaseRoute {
     constructor(route_name, verify = true) {
@@ -9,21 +10,12 @@ class AuthRoute extends BaseRoute {
     }
 
     RegisterRoutes() {
-        this.router.post(`${this.router_path}/`, (req, res, next) => {
+        this.router.post(`${this.router_path}/`, async(req, res, next) => {
             let [email, password] = [req.body?.email || null,req.body?.password || null]
             if (!email || !password) {
                 res.send(ReturnWrapper(400, "No Auth Data!", []))
             } else {
-                if (email === "dangkhanh.dev@gmail.com" && password === "13122002k@") {
-                    res.send(ReturnWrapper(200, "Login Success", {
-                        api_token: jwt.decode(jwt.sign({
-                            email,
-                            password
-                        }, this.config._secret),this.config._secret)
-                    }))
-                } else {
-                    res.send(ReturnWrapper(200, "Email Or Password Incorrect!",[]))
-                }
+                res.send(await AuthController.GetAccessToken(email,password));
             }
         })
     }

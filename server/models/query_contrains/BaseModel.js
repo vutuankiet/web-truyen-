@@ -1,6 +1,6 @@
-class BaseController{
+class BaseModel {
     constructor(props) {
         this.props = props
     }
 }
-export default BaseController;
+export default BaseModel

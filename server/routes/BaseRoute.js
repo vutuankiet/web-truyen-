@@ -2,6 +2,7 @@ import express from "express";
 import {ReturnWrapper} from "../Helper/err.js";
 
 import config from '../config.js'
+import AuthController from "../controllers/AuthController.js";
 
 class BaseRoute {
     constructor(route_name, verify = true) {
@@ -25,9 +26,9 @@ class BaseRoute {
         return bearer_token !== null ? bearer_token : ""
     }
 
-    VerifyToken(token, next, res) {
+    async VerifyToken(token, next, res) {
         console.log(token)
-        if (token) {
+        if (await AuthController.VerifyToken(token)) {
             return true
         } else {
             res.send(ReturnWrapper(201, "", []))
