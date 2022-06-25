@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import Logo from "../logo.svg"
+import Logo from "../logo.png";
 import {useEffect, useRef, useState} from "react";
 
 export const Navbar = (props) => {
@@ -38,7 +38,7 @@ export const Navbar = (props) => {
                     className={'hidden sm:flex mx-auto px-3 fixed bg-white w-full  xl:px-32 flex justify-between lg:justify-around sm:justify-between items-center  py-4 pc-nav'}>
                     <ul className={'flex justify-center items-center space-x-6'}>
                         <li>
-                            <a className={''}><img src={Logo} width={40}/></a>
+                            <Link to={'home'}><img src={Logo} width={40}/></Link>
                         </li>
 
                         <li>
@@ -53,44 +53,44 @@ export const Navbar = (props) => {
                                         <div>
                                             <ul className={'w-48'}>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Tất Cả</a>
+                                                    <Link to={'category'}>Tất Cả</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Huyền Huyễn</a>
+                                                    <Link to={'category'}>Huyền Huyễn</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Võng Du</a>
+                                                    <Link to={'category'}>Võng Du</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Đồng Nhân</a>
+                                                    <Link to={'category'}>Đồng Nhân</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Cạnh Kỹ</a>
+                                                    <Link to={'category'}>Cạnh Kỹ</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Kiếm Hiệp</a>
+                                                    <Link to={'category'}>Kiếm Hiệp</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div>
                                             <ul className={'w-48'}>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Tiên Hiệp</a>
+                                                    <Link to={'category'}>Tiên Hiệp</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Khoa Huyễn</a>
+                                                    <Link to={'category'}>Khoa Huyễn</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Đô Thị</a>
+                                                    <Link to={'category'}>Đô Thị</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Dã Sử</a>
+                                                    <Link to={'category'}>Dã Sử</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Huyền Nghi</a>
+                                                    <Link to={'category'}>Huyền Nghi</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Kỳ Ảo</a>
+                                                    <Link to={'category'}>Kỳ Ảo</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -110,22 +110,22 @@ export const Navbar = (props) => {
                                         <div>
                                             <ul className={'w-48'}>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Thịnh Hành</a>
+                                                    <Link to={'category'}>Thịnh Hành</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Đọc Nhiều</a>
+                                                    <Link to={'category'}>Đọc Nhiều</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Tặng Thưởng</a>
+                                                    <Link to={'category'}>Tặng Thưởng</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Đề Cử</a>
+                                                    <Link to={'category'}>Đề Cử</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Yêu Thích</a>
+                                                    <Link to={'category'}>Yêu Thích</Link>
                                                 </li>
                                                 <li className={'text-sm font-semobold text-amber-600'}>
-                                                    <a href="#">Thảo Luận</a>
+                                                    <Link to={'category'}>Thảo Luận</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -197,8 +197,8 @@ export const Navbar = (props) => {
                                 <div className={`flex items-center justify-between`}>
                                     <div className={`space-x-2`}>
                                         <i className="fas fa-signal font-lighter font-bold text-sm text-gray-700"></i>
-                                        <a className={'font-lighter font-bold text-sm text-gray-700'}>Bảng xếp
-                                            hạng</a>
+                                        <Link to={'#'} className={'font-lighter font-bold text-sm text-gray-700'}>Bảng xếp
+                                            hạng</Link>
                                     </div>
                                     <i className={`fa-solid ${collapse ? 'fa-angle-up' : 'fa-angle-down'} text-sm text-gray-700 float-right`}></i>
                                 </div>
@@ -237,8 +237,8 @@ export const Navbar = (props) => {
                                 <div className={`flex items-center justify-between`}>
                                     <div className={`space-x-2`}>
                                         <i className="fas fa-th-large font-lighter font-bold text-sm text-gray-700"></i>
-                                        <a className={'font-lighter font-bold text-sm text-gray-700'}>Thể
-                                            loại</a>
+                                        <Link to={'#'} className={'font-lighter font-bold text-sm text-gray-700'}>Thể
+                                            loại</Link>
                                     </div>
                                     <i className={`fa-solid ${typeListOpen ? 'fa-angle-up' : 'fa-angle-down'} text-sm text-gray-700 float-right`}></i>
                                 </div>
