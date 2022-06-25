@@ -4,6 +4,7 @@ import {Navigate} from 'react-router-dom'
 import {Home} from "./pages/Home";
 import {Detail} from "./pages/Detail";
 import {Layout} from "./pages/Layout";
+import {LayoutAuthor} from "./pages/Author/LayoutAuthor";
 import {createContext, useState} from "react";
 
 function App() {
@@ -17,8 +18,11 @@ function App() {
                                  element={<Detail title={'hello kiet'} style={{color: 'red'}}></Detail>}/>
                     <Route.Route path={'/'} element={<Navigate to={'home'}/>}/>
                 </Route.Route>
+                <Route.Route path={'/author'} element={<LayoutAuthor></LayoutAuthor>}>
+                </Route.Route>
             </Route.Routes>
         </Route.BrowserRouter>
+
     )
 }
 
