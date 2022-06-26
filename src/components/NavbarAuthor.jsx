@@ -100,34 +100,6 @@ export const Navbar = (props) => {
                         </div>
                     </nav>
                     <div className={`overflow-y-scroll items-center px-3 py-2 w-full float-right toggle-nav-style ${CloseNav?'admin-content-right toggle-nav-style' : 'w-full toggle-nav-style'}`}>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p><p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p><p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p><p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p><p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p><p>hi</p>
-                        <p>hi</p>
-                        <p>hi</p>
-
-
-
 
 
                     </div>
