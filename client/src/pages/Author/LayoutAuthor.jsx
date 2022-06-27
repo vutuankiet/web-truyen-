@@ -20,6 +20,7 @@ export const LayoutAuthor = () => {
 
     return (
         <>
+
             <div className={'grid grid-cols-2'}>
                 <div className={`${CloseNav ? 'block toggle-nav-style shadow-2xl' : 'hidden toggle-nav-style'} fixed overflow-y-scroll h-screen block toggle-nav-style shadow-2xl left-0 z-40 w-60 bg-white
                      scroll-auto`}>
