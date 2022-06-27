@@ -181,4 +181,41 @@
     }
 }
 
+/* Center the loader */
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #8b5cf6;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
 
+.bg-loader{
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background: rgba(139, 92, 246, 0.65);
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
